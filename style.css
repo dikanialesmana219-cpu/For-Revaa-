@@ -1,0 +1,674 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, "Segoe UI", sans-serif;
+}
+
+
+/* ==================================
+   HALAMAN 1
+   ================================== */
+
+.love-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 20% 20%, #fff 0, transparent 25%),
+        #f7e8ed;
+
+    color: #61444f;
+}
+
+.envelope-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#open-envelope {
+    display: none;
+}
+
+.love-envelope {
+    width: 390px;
+    height: 460px;
+
+    position: relative;
+
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.envelope-front,
+.envelope-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 22px;
+
+    border: 2px solid #d9aab9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transition: transform .8s ease;
+}
+
+.envelope-front {
+    background: #fffafc;
+}
+
+.envelope-back {
+    background: #f4dce4;
+
+    transform: rotateY(180deg);
+}
+
+#open-envelope:checked + .love-envelope .envelope-front {
+    transform: rotateY(-180deg);
+}
+
+#open-envelope:checked + .love-envelope .envelope-back {
+    transform: rotateY(0deg);
+}
+
+
+/* TEKS */
+
+.envelope-front h1 {
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.envelope-front p {
+    margin-top: 25px;
+    color: #a77b8b;
+}
+
+.big-heart {
+    font-size: 75px;
+    color: #d57996;
+
+    margin-bottom: 20px;
+
+    animation: heartBeat 1.5s infinite;
+}
+
+.small-heart {
+    font-size: 55px;
+    color: #cf718f;
+
+    margin-bottom: 20px;
+}
+
+.envelope-back h2 {
+    font-size: 27px;
+    line-height: 1.5;
+}
+
+
+/* PILIHAN */
+
+.choice {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.yes-button,
+.no-button {
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.yes-button {
+    background: #d47795;
+    color: white;
+}
+
+.no-button {
+    background: #fff;
+    color: #8c6874;
+}
+
+
+/* SPARKLE */
+
+.sparkle {
+    position: absolute;
+
+    color: #d886a0;
+
+    font-size: 25px;
+
+    animation: float 3s infinite ease-in-out;
+}
+
+.s1 {
+    top: 15%;
+    left: 15%;
+}
+
+.s2 {
+    top: 25%;
+    right: 17%;
+
+    animation-delay: .7s;
+}
+
+.s3 {
+    bottom: 15%;
+    left: 20%;
+
+    animation-delay: 1.2s;
+}
+
+
+/* ==================================
+   HALAMAN 2
+   ================================== */
+
+.dudu-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center top,
+            #fff4f8,
+            #f4dce5 50%,
+            #efd0dc
+        );
+
+    color: #624551;
+}
+
+.dudu-container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+    position: relative;
+}
+
+
+/* DUDU */
+
+.dudu-character {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: duduFloat 2.5s infinite ease-in-out;
+}
+
+.dudu-character img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* UCAPAN */
+
+.speech-box {
+    max-width: 600px;
+
+    background: white;
+
+    border: 2px solid #e4b4c5;
+
+    border-radius: 18px;
+
+    padding: 18px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(145, 80, 105, .08);
+
+    margin-bottom: 25px;
+}
+
+.speech-box p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* FORM */
+
+.heart-form {
+    width: 600px;
+    max-width: 95%;
+
+    text-align: center;
+}
+
+.heart-form h2 {
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+
+    resize: vertical;
+
+    border: 2px solid #ddb1c0;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: rgba(255,255,255,.9);
+}
+
+textarea:focus {
+    border-color: #c87996;
+}
+
+.screenshot-text {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    color: #87636f;
+}
+
+
+/* NEXT */
+
+.next-button {
+    margin-top: 20px;
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    background: #cf7594;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ==================================
+   HALAMAN 3
+   ================================== */
+
+.gift-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at center, #fff4f7, #f2d8e1);
+
+    color: #634651;
+}
+
+.gift-container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.gift-container h1 {
+    font-size: 32px;
+}
+
+.gift-subtitle {
+    margin-top: 10px;
+
+    color: #94707c;
+}
+
+
+/* DUDU */
+
+.dudu-gift {
+    width: 180px;
+    height: 170px;
+
+    margin-top: 15px;
+
+    animation: duduFloat 2.5s infinite ease-in-out;
+}
+
+.dudu-gift img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* KOTAK VIDEO */
+
+.video-gift {
+    position: relative;
+
+    width: 500px;
+    max-width: 95%;
+
+    margin-top: 10px;
+}
+
+
+/* KOTAK */
+
+#open-video {
+    display: none;
+}
+
+.gift-box {
+    width: 190px;
+    height: 150px;
+
+    margin: auto;
+
+    display: block;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.gift-body {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 20px;
+
+    width: 150px;
+    height: 100px;
+
+    background: #d77d99;
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgba(130, 65, 90, .18);
+}
+
+.gift-lid {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 35px;
+    left: 10px;
+
+    width: 170px;
+    height: 35px;
+
+    background: #bd6684;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 25px;
+
+    transition: .7s;
+}
+
+.gift-lid span {
+    line-height: 35px;
+}
+
+.ribbon-vertical {
+    position: absolute;
+
+    left: 62px;
+
+    width: 25px;
+    height: 100%;
+
+    background: #f2b6c8;
+}
+
+.ribbon-horizontal {
+    position: absolute;
+
+    top: 35px;
+
+    width: 100%;
+    height: 20px;
+
+    background: #f2b6c8;
+}
+
+
+/* SAAT DIBUKA */
+
+#open-video:checked + .gift-box .gift-lid {
+    transform: translateY(-70px) rotate(-5deg);
+}
+
+
+/* VIDEO */
+
+.video-content {
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition: 1s;
+
+    margin-top: 15px;
+}
+
+#open-video:checked ~ .video-content {
+    max-height: 500px;
+
+    opacity: 1;
+}
+
+.video-content video {
+    width: 100%;
+
+    border-radius: 15px;
+
+    border: 4px solid white;
+
+    box-shadow: 0 10px 35px rgba(100, 50, 70, .18);
+}
+
+
+/* TEKS */
+
+.open-text {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #9b7582;
+}
+
+.beautiful-text {
+    max-width: 700px;
+
+    margin-top: 35px;
+
+    background: rgba(255,255,255,.7);
+
+    border: 1px solid #e2bbc8;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    line-height: 1.8;
+}
+
+.beautiful-text h2 {
+    margin-bottom: 15px;
+
+    color: #a15f78;
+}
+
+.beautiful-text p {
+    margin-bottom: 13px;
+}
+
+
+/* WA */
+
+.wa-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    background: #cf7594;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .2s;
+}
+
+.wa-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ==================================
+   ANIMASI
+   ================================== */
+
+@keyframes heartBeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@keyframes duduFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+}
+
+
+/* ==================================
+   HP
+   ================================== */
+
+@media (max-width: 500px) {
+
+    .love-envelope {
+        width: 315px;
+        height: 430px;
+    }
+
+    .envelope-front h1 {
+        font-size: 23px;
+    }
+
+    .envelope-back h2 {
+        font-size: 23px;
+    }
+
+    .dudu-character {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gift-container h1 {
+        font-size: 26px;
+    }
+
+    .beautiful-text {
+        padding: 22px 18px;
+    }
+}
